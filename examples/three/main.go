@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	twitterscraper "github.com/n0madic/twitter-scraper"
+	twitterscraper "github.com/firodj/twitter-scraper"
 )
 
 func main() {
