@@ -5,49 +5,49 @@ import "time"
 type (
 	// Video type.
 	Video struct {
-		ID      string
-		Preview string
-		URL     string
+		ID      string	`json:"id"`
+		Preview string	`json:"preview"`
+		URL     string	`json:"url"`
 	}
 
 	// Tweet type.
 	Tweet struct {
-		Hashtags         []string
-		HTML             string
-		ID               string
-		InReplyToStatus  *Tweet
-		IsQuoted         bool
-		IsPin            bool
-		IsReply          bool
-		IsRetweet        bool
-		Likes            int
-		PermanentURL     string
-		Photos           []string
-		Place            *Place
-		QuotedStatus     *Tweet
-		Replies          int
-		Retweets         int
-		RetweetedStatus  *Tweet
-		Text             string
-		TimeParsed       time.Time
-		Timestamp        int64
-		URLs             []string
-		UserID           string
-		Username         string
-		Videos           []Video
-		SensitiveContent bool
+		Hashtags         []string `json:"hashtags"`
+		HTML             string  `json:"html"`
+		ID               string  `json:"id"`
+		InReplyToStatus  *Tweet  `json:"in_reply_to_status"`
+		IsQuoted         bool	`json:"is_quoted"`
+		IsPin            bool	`json:"is_pin"`
+		IsReply          bool	`json:"is_reply"`
+		IsRetweet        bool	`json:"is_retweet"`
+		Likes            int	`json:"likes"`
+		PermanentURL     string	`json:"permanent_url"`
+		Photos           []string	`json:"photos"`
+		Place            *Place		`json:"place"`
+		QuotedStatus     *Tweet	`json:"quoted_status"`
+		Replies          int	`json:"replies"`
+		Retweets         int	`json:"retweets"`
+		RetweetedStatus  *Tweet	`json:"retweeted_status"`
+		Text             string	`json:"text"`
+		TimeParsed       time.Time	`json:"time_parsed"`
+		Timestamp        int64	`json:"timestamp"`
+		URLs             []string `json:"urls"`
+		UserID           string	`json:"user_id"`
+		Username         string	`json:"username"`
+		Videos           []Video	`json:"videos"`
+		SensitiveContent bool	`json:"sensitive_content"`
 	}
 
 	// ProfileResult of scrapping.
 	ProfileResult struct {
 		Profile
-		Error error
+		Error error	`json:"error"`
 	}
 
 	// TweetResult of scrapping.
 	TweetResult struct {
 		Tweet
-		Error error
+		Error error `json:"error"`
 	}
 
 	legacyUser struct {
